@@ -8,5 +8,19 @@
 
 import Foundation
 
-print("Hello, World!")
-
+var someInts = [4, 5, 7, 8, 0, 2, 6, 1, 9, 3]
+var temp = 0
+var i = 0
+var j = 0
+for i in 0...9{
+    for j in 0...9{
+        if someInts[i] > someInts[j]{
+            temp = someInts[i]
+            someInts[i] = someInts[j]
+            someInts[j] = temp
+        }
+    }
+}
+for i in 0...9{
+    print(someInts[i])
+}
